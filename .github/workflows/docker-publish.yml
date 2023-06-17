@@ -14,6 +14,7 @@ jobs:
 
     steps:
       - name: Get Timestamp Action
+        id: get-time
         uses: nanzm/get-time-action@v2.0
         with:
           timeZone: UTC+8
@@ -21,7 +22,7 @@ jobs:
           
       - name: Echo
         env:
-          TIME: "${{ steps.time.outputs.time }}"
+          TIME: "${{ steps.get-time.outputs.time }}"
         run: |
           echo $TIME
       

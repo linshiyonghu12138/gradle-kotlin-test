@@ -18,6 +18,12 @@ jobs:
         with:
           timeZone: UTC+8
           format: yyyyMMddHHmmss
+          
+      - name: Echo
+        env:
+          TIME: "${{ steps.time.outputs.time }}"
+        run: |
+          echo $TIME
       
 #       - name: Checkout code
 #         uses: actions/checkout@v3

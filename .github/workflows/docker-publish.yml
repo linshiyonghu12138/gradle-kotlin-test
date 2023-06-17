@@ -17,8 +17,8 @@ jobs:
         id: get-time
         uses: nanzm/get-time-action@v2.0
         with:
-          timeZone: UTC+8
-          format: yyyyMMddHHmmss
+          timeZone: UTC/GMT+08:00
+          format: YYYYMMDDHHmmss
           
       - name: Echo
         env:

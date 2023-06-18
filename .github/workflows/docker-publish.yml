@@ -21,10 +21,8 @@ jobs:
           format: YYYYMMDDHHmmss
           
       - name: Echo
-        env:
-          TIME: "${{ steps.get-time.outputs.time }}"
         run: |
-          echo $TIME
+          echo ${{ steps.get-time.outputs.time }}
       
 #       - name: Checkout code
 #         uses: actions/checkout@v3

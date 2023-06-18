@@ -14,20 +14,22 @@ jobs:
 
     steps:
       
-      - name: Checkout code
-        uses: actions/checkout@v3
+#       - name: Checkout code
+#         uses: actions/checkout@v3
 
-      - name: Set up JDK
-        uses: actions/setup-java@v1.4.4
-        with:
-          java-version: '17'
+#       - name: Set up JDK
+#         uses: actions/setup-java@v1.4.4
+#         with:
+#           java-version: '17'
 
-      - name: Gradle Build Action
-        run: ./gradlew clean assemble
+#       - name: Gradle Build Action
+#         run: ./gradlew clean assemble
 
       - name: Test
         run: |
           echo 1
+          echo 2
+          echo 3
 #       - name: Docker Login
 #         uses: linshiyonghu12138/local-docker-build@alpha2
 #         with:

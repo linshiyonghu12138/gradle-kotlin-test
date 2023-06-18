@@ -25,13 +25,16 @@ jobs:
       - name: Gradle Build Action
         run: ./gradlew clean assemble
 
-      - name: Docker Login
-        uses: linshiyonghu12138/local-docker-build@alpha2
-        with:
-          registry: fengwenhao
-          image: gradle-ci-test
-          username: fengwenhao
-          password: ${{ secrets.DOCKER_HUB_TOKEN }}
-          addTimestamp: true
-          addLatest: true
-          timeZone: Asia/Shanghai
+      - name: Test
+        run: |
+          echo 1
+#       - name: Docker Login
+#         uses: linshiyonghu12138/local-docker-build@alpha2
+#         with:
+#           registry: fengwenhao
+#           image: gradle-ci-test
+#           username: fengwenhao
+#           password: ${{ secrets.DOCKER_HUB_TOKEN }}
+#           addTimestamp: true
+#           addLatest: true
+#           timeZone: Asia/Shanghai

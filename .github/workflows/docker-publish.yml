@@ -34,3 +34,4 @@ jobs:
           password: ${{ secrets.DOCKER_HUB_TOKEN }}
           addLatest: true
           addTimestamp: true
+          push: true

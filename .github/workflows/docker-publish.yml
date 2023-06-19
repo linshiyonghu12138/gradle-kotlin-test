@@ -25,12 +25,11 @@ jobs:
       - name: Gradle Build Action
         run: ./gradlew clean assemble
         
-      - name: Docker Build And Push
-        uses: linshiyonghu12138/local-docker-build@beta1
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v4.0.0
         with:
-          image: gradle-ci-test
+          tags: fengwenhao/gradle-ci
           username: fengwenhao
           password: ${{ secrets.DOCKER_HUB_TOKEN }}
-          addTimestamp: true
           addLatest: true
-          timeZone: Asia/Shanghai
+          addTimestamp: true

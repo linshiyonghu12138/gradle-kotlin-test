@@ -30,6 +30,7 @@ jobs:
         with:
           tags: fengwenhao/gradle-ci
           username: fengwenhao
+          context: .
           password: ${{ secrets.DOCKER_HUB_TOKEN }}
           addLatest: true
           addTimestamp: true

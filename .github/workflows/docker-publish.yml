@@ -22,6 +22,14 @@ jobs:
         with:
           java-version: '17'
 
+      - name: Check cache
+        id: check-cache
+        uses: actions/cache@v3.2.6
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+
       - name: Gradle Build Action
         run: ./gradlew clean assemble
         

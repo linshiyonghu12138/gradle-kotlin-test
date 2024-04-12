@@ -12,7 +12,7 @@ class MyServiceImpl: IMyService {
 
     override fun test(source: String): String {
 
-        return "result is $source"
+        return "result is <$source>"
     }
 }
 

@@ -42,10 +42,10 @@ jobs:
           password: ${{ secrets.TENCENT_TCR_PASSWORD }}
         
       - name: Build and push Docker image
-        uses: docker/build-push-action@v4.0.0
+        uses: docker/build-push-action@v5.3.0
         with:
-          tags: fengwenhao/gradle-ci
           context: .
-          addLatest: true
-          addTimestamp: true
           push: true
+          tags: |
+            ccr.ccs.tencentyun.com/fengwenhao/gradle-kotlin-test:latest
+            ccr.ccs.tencentyun.com/fengwenhao/gradle-kotlin-test:${{ github.run_number }}
